@@ -35,9 +35,10 @@ jobs:
     - name: NuGet to restore dependencies as well as project-specific tools that are specified in the project file
       run: nuget restore
   
-    #- name: Add msbuild to PATH
-     # uses: microsoft/setup-msbuild@v1.0.0
-      #with:
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v1.0.0
+      with:
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: true
       #  vs-version: "[16.4,16.5]"  #Version of Visual Studio to search; defaults to latest if not specified
 
     - name: Run MSBuild
