@@ -48,6 +48,6 @@ jobs:
       with: 
         app-name: ${{ env.app-peg-dev-001 }} 
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6B6F5D2DFC7D4AB48F202816826DEFA4  }}
-        package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
+        package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/SampleWebApplication'
   
   # For more samples to get started with GitHub Action workflows to deploy to Azure, refer to https://github.com/Azure/actions-workflow-samples
